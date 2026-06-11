@@ -1,0 +1,3 @@
+q + enter = stop
+
+cd (archive) > npm run dev = start live server 
