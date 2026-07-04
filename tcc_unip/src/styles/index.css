@@ -1,12 +1,13 @@
-*, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; font-family: "Montserrat", sans-serif; }
+*, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
 
 :root {
   --black: #0d0d0d;
   --white: #fff;
-  --accent: #E07D54;
+  --accent: rgb(216, 90, 48);
+  --muted-accent: #FEF0E9;
   --accent-dark: #c5f038;
   --muted: #636363; /* 888 */
-  --font-body: 'DM Sans', sans-serif;
+  --muted-second: #E2E0DB;
   --font-color: #fff;
 
 }
@@ -16,7 +17,9 @@ body {
   padding: 0;
   margin: 0;
   color: var(--black);
-  font-family: var(--font-body);
+  font-style: normal;
+  font-optical-sizing: auto;
+
 }
 
 header {

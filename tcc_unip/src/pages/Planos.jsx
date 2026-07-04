@@ -1,136 +1,220 @@
 import '../styles/planos.css'
+import { Star } from 'lucide-react'
+
 
 export default function Plans () {
     return(
         <section>
             <div className='pLayer'>
-                <div className = 'pSeparator'>
-                    <div className = 'pCard'>
+                <div className='pSeparator'>
+
+                    {/* PLANO BLUE */}
+                    <div className='pCard'>
                         <div className='pHeader'>
-                            <h2>PLANO <br></br> BLUE</h2>
+                            <div className='phTag'>
+                                <p>BLUE</p>
+                            </div>
+                            <h2>Plano Blue</h2>
                             <div>
-                                <p className='pOV'>A partir de:</p>
+                                <p>A partir de:</p>
                                 <div className='pValor'>
-                                    <h6>R$</h6>
+                                    <h6 className='mutedTag'>R$</h6>
                                     <h3>119,90</h3>
-                                    <p>por mês</p>                        
+                                    <p className='mutedTag'>/mês</p>
                                 </div>
                             </div>
                         </div>
+                        <hr className='sep'></hr>
                         <div className='pBody'>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem limites de horário</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Acesso a todas as aulas coletivas</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Leve <strong>2</strong> amigos para treinar com você</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Taxa de Matrícula de <strong>R$60,00</strong></p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Taxa de Anuidade de <strong>R$99,90</strong></p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem Fidelidade</p>
-                            </div>
+                            <ul className="pTemplate">
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem limites de horário
+                                </li>
+                                <li className="pDisabled">
+                                    <svg className="chk" viewBox="0 0 16 16" fill="none">
+                                        <circle cx="8" cy="8" r="7" stroke="var(--muted)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8h6" stroke="var(--muted)" strokeWidth="1.4" strokeLinecap="round"></path>
+                                    </svg>
+                                    <span>Acesso a todas as aulas coletivas</span>
+                                </li>
+                                <li className="pDisabled">
+                                    <svg className="chk" viewBox="0 0 16 16" fill="none">
+                                        <circle cx="8" cy="8" r="7" stroke="var(--muted)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8h6" stroke="var(--muted)" strokeWidth="1.4" strokeLinecap="round"></path>
+                                    </svg>
+                                    <span>Sem permissão para convidados</span>
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Taxa de matrícula de R$60,00
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Taxa de anuidade de R$99,90
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem fidelidade
+                                </li>
+                            </ul>
+                            <button className="pButton">Escolher Blue</button>
                         </div>
                     </div>
-                    <div className = 'pCard'>
+
+                    {/* PLANO GOLD (destaque) */}
+                    <div className='pCard favorite'>
+                        <span className="pFeaturedBadge">Mais escolhido</span>
                         <div className='pHeader'>
-                            <h2>PLANO <br></br> GOLD</h2>
+                            <div className='pFavorite phTag'>
+                                <Star size={12} fill="currentColor" strokeWidth={1} />
+                                <p>GOLD</p>
+                            </div>
+                            <h2>Plano Gold</h2>
                             <div>
-                                <p className='pOV'>A partir de:</p>
+                                <p>A partir de:</p>
                                 <div className='pValor'>
-                                    <h6>R$</h6>
+                                    <h6 className='mutedTag'>R$</h6>
                                     <h3>129,90</h3>
-                                    <p>por mês</p>                        
+                                    <p className='mutedTag'>/mês</p>
                                 </div>
                             </div>
                         </div>
+                        <hr className='sep'></hr>
                         <div className='pBody'>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem limites de horário</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Acesso a todas as aulas coletivas</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Leve <strong>5</strong> amigos para treinar com você</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem taxa de matrícula</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem taxa de anuidade</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Fidelidade de 12 meses</p>
-                            </div>
+                            <ul className="pTemplate">
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem limites de horário
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Acesso a todas as aulas coletivas
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Até 5 convidados
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem taxa de matrícula
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem taxa de anuidade
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Fidelidade de 12 meses
+                                </li>
+                            </ul>
+                            <button className="pButton pButtonFavorite">Escolher Gold</button>
                         </div>
                     </div>
-                    <div className = 'pCard'>
+
+                    {/* PLANO PLATINUM */}
+                    <div className='pCard'>
                         <div className='pHeader'>
-                            <h2>PLANO <br></br> PLATINUM</h2>
+                            <div className='phTag'>
+                                <p>PLATINUM</p>
+                            </div>
+                            <h2>Plano Platinum</h2>
                             <div>
-                                <p className='pOV'>A partir de:</p>
+                                <p>A partir de:</p>
                                 <div className='pValor'>
-                                    <h6>R$</h6>
+                                    <h6 className='mutedTag'>R$</h6>
                                     <h3>149,90</h3>
-                                    <p>por mês</p>                        
+                                    <p className='mutedTag'>/mês</p>
                                 </div>
                             </div>
                         </div>
+                        <hr className='sep'></hr>
                         <div className='pBody'>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem limites de horário</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Acesso a todas as aulas coletivas</p>
-                            </div>
-                            <div className = 'pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Leve <strong>5</strong> amigos para treinar com você</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem taxa de matrícula</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem taxa de anuidade</p>
-                            </div>
-                            <div className='pTemplate'>
-                                <img src="https://cdn.prod.website-files.com/64dbdfb5c42ae70621943853/6736795cdc1c44d160a856df_plan-benefit-light-icon.svg" loading="lazy" alt="" class="plano_item-icon-list-light"></img>
-                                <p>Sem Fidelidade</p>
-                            </div>
+                            <ul className="pTemplate">
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem limites de horário
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Acesso a todas as aulas coletivas
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Até 5 convidados
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem taxa de matrícula
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem taxa de anuidade
+                                </li>
+                                <li>
+                                    <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
+                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                    </svg>
+                                    Sem fidelidade
+                                </li>
+                            </ul>
+                            <button className="pButton">Escolher Platinum</button>
                         </div>
                     </div>
+
                 </div>
                 <p className='pContractInfo'>
-            Valores e condições válidos para novas matrículas, podendo variar conforme plano e unidade. 
-            Sujeitos a alteração sem aviso prévio. As cortesias para convidados são válidas apenas no mês vigente e não são cumulativas. 
-            Para mais informações, consulte os contratos ou fale com nosso atendimento.
+                    Valores e condições válidos para novas matrículas, podendo variar conforme plano e unidade.
+                    Sujeitos a alteração sem aviso prévio. As cortesias para convidados são válidas apenas no mês vigente e não são cumulativas.
+                    Para mais informações, consulte os contratos ou fale com nosso atendimento.
                 </p>
             </div>
         </section>
-
-        
     )
 }
