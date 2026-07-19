@@ -129,7 +129,6 @@
     border: 2px solid var(--accent);
     transform: scale(1.03);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-    z-index: 1;
 }
 
 .pFeaturedBadge {
@@ -163,6 +162,8 @@
 
 .pButton:hover {
     opacity: 0.85;
+    background-color: var(--accent);
+    color: var(--white);
 }
 
 .pButtonFavorite {
