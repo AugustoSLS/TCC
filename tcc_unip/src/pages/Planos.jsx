@@ -1,8 +1,12 @@
 import '../styles/planos.css'
 import { Star } from 'lucide-react'
+import { useModal } from '../context/ModalContext';
 
 
 export default function Plans () {
+
+    const { openModal } = useModal();
+
     return(
         <section>
             <div className='pLayer'>
@@ -70,7 +74,7 @@ export default function Plans () {
                                     Sem fidelidade
                                 </li>
                             </ul>
-                            <button className="pButton">Escolher Blue</button>
+                            <button className="pButton" onClick={() => openModal()}>Escolher Blue</button>
                         </div>
                     </div>
 
@@ -138,7 +142,7 @@ export default function Plans () {
                                     Fidelidade de 12 meses
                                 </li>
                             </ul>
-                            <button className="pButton pButtonFavorite">Escolher Gold</button>
+                            <button className="pButton pButtonFavorite" onClick={() => openModal()}>Escolher Gold</button>
                         </div>
                     </div>
 
@@ -204,7 +208,7 @@ export default function Plans () {
                                     Sem fidelidade
                                 </li>
                             </ul>
-                            <button className="pButton">Escolher Platinum</button>
+                            <button className="pButton" onClick={() => openModal()}>Escolher Platinum</button>
                         </div>
                     </div>
 
