@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useModal } from '../../context/ModalContext';
+
 import DdiSelect from '../DDI/ddiSelect';
+import { API_URL } from '../../config';
 
 
 
@@ -26,12 +28,40 @@ export default function FormModal() {
   setCpf(v);
 };
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const form = e.target;
+
+  const payload = {
+    nome: form.nome.value,
+    sobrenome: form.sobrenome.value,
+    cpf: cpf,
+    data_nascimento: form.data_nascimento.value,
+    email: form.email.value,
+    ddi: ddi,
+    telefone: telefone, 
+  };
+
+  try {
+    const res = await fetch(`${API_URL}/api/usuarios`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+    if (!res.ok) throw new Error('Falha ao cadastrar');
+    closeModal();
+  } catch (err) {
+    console.error(err);
+    alert('Erro ao salvar. Tente novamente.');
+  }
+};
+
   if (!showModal) return null;
 
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <form className='cForm' onSubmit={(e) => {e.preventDefault();closeModal();}}>
+        <form className='cForm' onSubmit={handleSubmit}>
           <div className='cForm-pinfo'>
             <label>Nome</label>
               <input name="nome" type="text" placeholder="Nome" required/>
@@ -51,7 +81,7 @@ export default function FormModal() {
             <label>Telefone para Contato</label>
             <div className='tinfo'>
               <DdiSelect value={ddi} onChange={setDdi} />
-              <input name="telefone" placeholder="Número" value={telefone} onChange={handleTelefoneChange} required/>
+              <input name="telefone" placeholder="(11) 99999-9999" value={telefone} onChange={handleTelefoneChange} required/>
             </div>
           </div>
           <button type="submit" className="drawer-submit">Salvar</button>

@@ -1,30 +1,111 @@
+.cSection {
+    padding: 3rem 4rem;
+}
+
+.cToolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 2rem;
+}
+
+.cSearchGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 480px;
+}
+
+.cSearch {
+    flex: 1;
+    border: 1px solid #e5e0da;
+    border-radius: 10px;
+    background: #faf8f6;
+    padding: 12px 16px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.cSearch:focus {
+    outline: none;
+    border-color: #D85A30;
+    background: #fff;
+}
+
+.cViewToggle {
+    display: flex;
+    border: 1px solid #e5e0da;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cViewToggle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #faf8f6;
+    color: #8a8175;
+    padding: 11px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cViewToggle button.active {
+    background: #D85A30;
+    color: #fff;
+}
+
+.cSearch:focus {
+    outline: none;
+    border-color: #D85A30;
+    background: #fff;
+}
+
+.cCount {
+    font-size: 13px;
+    font-weight: 600;
+    color: #D85A30;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
 .cCards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1rem;
-    padding: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
 }
 
 .uCard {
     display: flex;
-    gap: 1rem;
-    background: var(--white);
-    border-radius: 16px;
-    padding: 20px;
-    width: 320px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #efe9e3;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 
 .uCard:hover {
-    box-shadow: 0px 0px 10px var(--accent);
+    box-shadow: 0 6px 20px rgba(216, 90, 48, 0.15);
+    border-color: #D85A30;
     cursor: pointer;
+    transform: translateY(-2px);
 }
 
 .uAvatar {
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .uAvatar img {
@@ -36,12 +117,86 @@
 .uInfo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2px;
     color: var(--black);
+    min-width: 0;
 }
 
-.unInfo {
+.uId {
+    font-size: 11px;
+    font-weight: 700;
+    color: #D85A30;
+    letter-spacing: 0.04em;
+}
+
+.unInfo p {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.uEmail {
+    font-size: 13px;
+    color: #8a8175;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cEmpty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #8a8175;
+    padding: 3rem 0;
+}
+
+
+.cList {
     display: flex;
-    gap: .25em;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.uRow {
+    display: grid;
+    grid-template-columns: 56px 60px 1fr 1fr 160px;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #efe9e3;
+    border-radius: 10px;
+    padding: 10px 18px;
+    transition: border-color 0.2s ease;
+}
+
+.uRow:hover {
+    border-color: #D85A30;
+    cursor: pointer;
+}
+
+.uRow .uAvatar {
+    width: 40px;
+    height: 40px;
+}
+
+.uRow .uId {
+    font-size: 12px;
+    font-weight: 700;
+    color: #D85A30;
+}
+
+.uRow .uNome {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.uRow .uEmail,
+.uRow .uTelefone {
+    font-size: 13px;
+    color: #8a8175;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
