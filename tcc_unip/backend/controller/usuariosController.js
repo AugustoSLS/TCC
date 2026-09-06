@@ -1,4 +1,4 @@
-import { listarUsuarios, cadastrarUsuario } from '../services/usuariosService.js';
+import { listarUsuarios, cadastrarUsuario, buscarUsuarioPorId } from '../services/usuariosService.js';
 
 export async function getUsuarios(req, res) {
   const usuarios = await listarUsuarios();
@@ -15,5 +15,19 @@ export async function postUsuario(req, res) {
       return res.status(409).json({ error: 'CPF ou email já cadastrado.' });
     }
     res.status(500).json({ error: 'Erro ao cadastrar usuário.' });
+  }
+}
+
+export async function getUsuarioPorId(req, res) {
+  try {
+    const { id } = req.params;
+    const usuario = await buscarUsuarioPorId(id);
+    if (!usuario) {
+      return res.status(404).json({ error: 'Usuário não encontrado.' });
+    }
+    res.json(usuario);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao buscar usuário.' });
   }
 }

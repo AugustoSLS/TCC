@@ -1,21 +1,73 @@
 *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
 
 :root {
-  --black: #0d0d0d;
-  --white: #fff;
+  --bg: #fff;
   --accent: rgb(216, 90, 48);
-  --muted-accent: #FEF0E9;
-  --accent-alter: #c5f038;
+  --muted-accent: rgb(255, 196, 176);
   --muted: #636363; /* 888 */
-  --muted-second: #E2E0DB;
-  --font-color: #fff;
-
+  --font-color: #0d0d0d;
+  --font-color-button: #fff;
+  --search-color: rgba(216, 90, 48, 0.1);
 }
+
+[data-theme="dark"] {
+  --bg: #1A1A1A;
+  --accent: #c5f038;
+  --muted-accent: rgb(233, 255, 161);
+  --font-color: #fff;
+  --font-color-button: #0d0d0d;
+  --muted: #b3b2b0;
+  --search-color: rgba(197, 240, 56, 0.1);
+}
+
+.themeSwitch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.themeSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.themeTrack {
+  position: absolute;
+  inset: 0;
+  background: var(--gray-300, #D8D4CC);
+  border-radius: 100px;
+  transition: background .2s ease;
+}
+
+.themeTrack::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background: #FFF;
+  border-radius: 50%;
+  transition: transform .2s ease;
+}
+
+.themeSwitch input:checked + .themeTrack {
+  background: var(--accent);
+}
+
+.themeSwitch input:checked + .themeTrack::before {
+  transform: translateX(18px);
+}
+
 
 body {  
   padding: 0;
   margin: 0;
-  color: var(--black);
+  background-color: var(--bg);
   font-style: normal;
   font-optical-sizing: auto;
 
@@ -23,7 +75,7 @@ body {
 
 header {
   width: 100%;
-  background: var(--white);
+  background-color: var(--bg);
   padding: 1.25rem 2rem;
   display: flex;
   align-items: center;
@@ -47,7 +99,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: var(--black);
+  color: var(--font-color);
   text-decoration: underline var(--accent);
   text-underline-offset: 4px;
 }
@@ -56,12 +108,12 @@ header nav a.active {
   text-decoration: underline var(--accent);
   text-underline-offset: 4px;
   font-weight: 600;
-  color: var(--black);
+  color: var(--font-color);
 }
 
 header .cta { 
   background: var(--accent); 
-  color: var(--white); 
+  color: var(--font-color-button); 
   font-family: var(--font-body); 
   font-weight: 600; 
   font-size: 13px; 
@@ -75,10 +127,11 @@ header .cta {
 
 .search-wrap {
   display: flex;
+  position: relative;
   margin-left: auto;
   align-items: center;
   gap: 5px;
-  background: var(--white);
+  background: var(--bg);
   border: 1px solid #333;
   border-radius: 8px;
   padding: 0 0.8rem;
@@ -88,16 +141,68 @@ header .cta {
   max-width: 450px;
 }
 
+.searchResults {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 320px;
+  max-height: 360px;
+  overflow-y: auto;
+  background: var(--bg);
+  color: var(--font-color);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  z-index: 3;
+}
+
+.searchCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.searchCard:hover {
+  background-color: var(--search-color);
+}
+
+.searchCard img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.searchNome { 
+  font-size: 14px; 
+  font-weight: 600; 
+  margin: 0; 
+}
+
+.searchEmail { 
+  font-size: 12px; 
+  color: var(--muted); 
+  margin: 0; 
+}
+
+.searchEmpty { 
+  padding: 14px; 
+  font-size: 13px; 
+  color: var(--muted); 
+  margin: 0; 
+}
+
 .search-wrap svg { 
   flex-shrink: 0; 
   opacity: 0.45; 
+  color: var(--font-color);
 }
 
 .search-wrap input {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--black);
+  color: var(--font-color);
   font-family: var(--font-body);
   font-size: 13px;
   width: 100%;
@@ -106,55 +211,3 @@ header .cta {
 .search-wrap input::placeholder { 
   color: var(--muted); 
 }
-
-
-
-/*
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-*/

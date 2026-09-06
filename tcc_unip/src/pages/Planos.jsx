@@ -33,8 +33,8 @@ export default function Plans () {
                             <ul className="pTemplate">
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem limites de horário
                                 </li>
@@ -54,22 +54,22 @@ export default function Plans () {
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Taxa de matrícula de R$60,00
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Taxa de anuidade de R$99,90
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem fidelidade
                                 </li>
@@ -101,43 +101,43 @@ export default function Plans () {
                             <ul className="pTemplate">
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem limites de horário
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Acesso a todas as aulas coletivas
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Até 5 convidados
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem taxa de matrícula
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem taxa de anuidade
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Fidelidade de 12 meses
                                 </li>
@@ -167,43 +167,43 @@ export default function Plans () {
                             <ul className="pTemplate">
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem limites de horário
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Acesso a todas as aulas coletivas
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Até 5 convidados
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem taxa de matrícula
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem taxa de anuidade
                                 </li>
                                 <li>
                                     <svg className="chk" viewBox="0 0 16 16" fill="var(--accent)">
-                                        <circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2"></circle>
-                                        <path d="M5 8l2 2 4-4" stroke="#fff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.2"></circle>
+                                        <path d="M5 8l2 2 4-4" stroke="var(--font-color-button)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                     Sem fidelidade
                                 </li>

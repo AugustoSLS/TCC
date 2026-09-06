@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import '../styles/client.css';
+import { useNavigate } from 'react-router-dom';
+
+
 
 export default function Clients() {
+
+    const navigate = useNavigate();
+
     const [clientes, setClientes] = useState([]);
     const [carregando, setCarregando] = useState(true);
     const [erro, setErro] = useState(null);
@@ -64,9 +70,13 @@ export default function Clients() {
 
             <div className={visualizacao === 'grid' ? 'cCards' : 'cList'}>
                 {clientesFiltrados.map((cliente) => (
-                    <div className={visualizacao === 'grid' ? 'uCard' : 'uRow'} key={cliente.id}>
+                    <div className={visualizacao === 'grid' ? 'uCard' : 'uRow'} 
+                    key={cliente.id}
+                    onClick={() => navigate(`/clientes/${cliente.id}`)}
+                    style={{cursor: 'pointer'}}
+                    >
                         <div className='uAvatar'>
-                            <img src="./src/assets/profile.jpg" alt='photo.user' />
+                            <img src="./src/assets/profile.png" alt='photo.user' />
                         </div>
 
                         {visualizacao === 'grid' ? (

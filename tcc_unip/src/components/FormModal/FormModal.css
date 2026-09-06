@@ -14,7 +14,7 @@
   height: auto;
   max-height: 90vh;
   overflow-y: auto;
-  background: #fff;
+  background: var(--bg);
   border-radius: 16px;
   padding: 40px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -39,15 +39,16 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #D85A30;
+  color: var(--accent);
   margin-bottom: 6px;
 }
 
 .cForm input {
   width: 100%;
-  border: 1px solid #e5e0da;
+  border: 1px solid var(--accent);
+  color: var(--font-color);
   border-radius: 10px;
-  background: #faf8f6;
+  background: var(--bg);
   padding: 12px 14px;
   font-size: 15px;
   font-weight: 400;
@@ -57,8 +58,9 @@
 
 .cForm input:focus {
   outline: none;
-  border-color: #D85A30;
-  background: #fff;
+  border-color: var(--accent);
+  background: var(--bg);
+  color: var(--font-color)
 }
 
 .cForm-pinfo,
@@ -95,8 +97,8 @@
 }
 
 .drawer-submit {
-  background: #D85A30;
-  color: #fff;
+  background: var(--accent);
+  color: var(--font-color-button);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 15px;
@@ -114,9 +116,10 @@
 }
 
 .ddi-select {
-  border: 1px solid #e5e0da;
+  border: 1px solid var(--accent);
   border-radius: 10px;
-  background: #faf8f6;
+  background: var(--bg);
+  color: var(--font-color);
   padding: 12px 10px;
   font-size: 15px;
   max-width: 30%;

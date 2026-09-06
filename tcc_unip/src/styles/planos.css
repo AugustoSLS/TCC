@@ -1,5 +1,5 @@
 .mutedTag {
-    color: var(--muted);
+    color: var(--accent);
     font-size: small;
     font-weight: 500;
 }
@@ -29,9 +29,14 @@
     width: 400px;
     height: auto;
     border-radius: 1.5rem;
-    background-color: var(--white);
-    border: 1px solid var(--black);
+    background-color: var(--bg);
+    border: 1px solid var(--accent);
+    color: var(--font-color);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.favorite button {
+    color: black;
 }
 
 .pHeader {
@@ -59,7 +64,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     background: var(--muted-accent);
-    color: var(--accent);
+    color: black;
     border-radius: 4px;
     padding: 3px 8px;
 }
@@ -76,7 +81,7 @@
 
 .sep {
     border: none;
-    border-top: 1px solid var(--muted-second);
+    border-top: 1px solid var(--muted-accent);
     margin: 20px 0;
 }
 
@@ -122,13 +127,12 @@
 
 .pFavorite {
     background-color: var(--accent);
-    color: var(--white);
+    color: black;
 }
 
 .favorite {
     border: 2px solid var(--accent);
     transform: scale(1.03);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .pFeaturedBadge {
@@ -137,7 +141,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: var(--accent);
-    color: var(--white);
+    color: black;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -163,7 +167,7 @@
 .pButton:hover {
     opacity: 0.85;
     background-color: var(--accent);
-    color: var(--white);
+    color: var(--font-color-button);
 }
 
 .pButtonFavorite {

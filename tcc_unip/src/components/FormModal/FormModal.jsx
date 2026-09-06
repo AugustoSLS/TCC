@@ -4,8 +4,6 @@ import { useModal } from '../../context/ModalContext';
 import DdiSelect from '../DDI/ddiSelect';
 import { API_URL } from '../../config';
 
-
-
 import './FormModal.css';
 
 export default function FormModal() {
@@ -31,7 +29,6 @@ export default function FormModal() {
 const handleSubmit = async (e) => {
   e.preventDefault();
   const form = e.target;
-
   const payload = {
     nome: form.nome.value,
     sobrenome: form.sobrenome.value,
@@ -61,6 +58,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        
         <form className='cForm' onSubmit={handleSubmit}>
           <div className='cForm-pinfo'>
             <label>Nome</label>

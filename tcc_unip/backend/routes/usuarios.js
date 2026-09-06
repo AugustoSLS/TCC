@@ -1,6 +1,6 @@
 import express from 'express';
 import { listarUsuarios } from '../services/usuariosService.js';
-import { getUsuarios, postUsuario } from '../controller/usuariosController.js';
+import { postUsuario, getUsuarioPorId } from '../controller/usuariosController.js';
 
 const router = express.Router();
 
@@ -14,6 +14,7 @@ router.get('/api/usuarios', async (req, res) => {
   }
 });
 
+router.get('/api/usuarios/:id', getUsuarioPorId);
 router.post('/api/usuarios', postUsuario);
 
 export default router;

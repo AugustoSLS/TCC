@@ -20,9 +20,9 @@
 
 .cSearch {
     flex: 1;
-    border: 1px solid #e5e0da;
+    border: 2px solid var(--accent);
     border-radius: 10px;
-    background: #faf8f6;
+    background: var(--bg);
     padding: 12px 16px;
     font-size: 15px;
     box-sizing: border-box;
@@ -31,13 +31,14 @@
 
 .cSearch:focus {
     outline: none;
-    border-color: #D85A30;
-    background: #fff;
+    border-color: var(--accent);
+    background: var(--bg);
+    color: var(--font-color)
 }
 
 .cViewToggle {
     display: flex;
-    border: 1px solid #e5e0da;
+    border: 2px solid var(--accent);
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
@@ -48,28 +49,22 @@
     align-items: center;
     justify-content: center;
     border: none;
-    background: #faf8f6;
-    color: #8a8175;
+    background: var(--bg);
+    color: var(--font-color);
     padding: 11px 12px;
     cursor: pointer;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
 .cViewToggle button.active {
-    background: #D85A30;
-    color: #fff;
-}
-
-.cSearch:focus {
-    outline: none;
-    border-color: #D85A30;
-    background: #fff;
+    background: var(--accent);
+    color: var(--font-color-button);
 }
 
 .cCount {
     font-size: 13px;
     font-weight: 600;
-    color: #D85A30;
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.04em;
     white-space: nowrap;
@@ -85,8 +80,8 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    background: #fff;
-    border: 1px solid #efe9e3;
+    background: var(--bg);
+    border: 2px solid var(--accent);
     border-radius: 14px;
     padding: 18px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -94,8 +89,6 @@
 }
 
 .uCard:hover {
-    box-shadow: 0 6px 20px rgba(216, 90, 48, 0.15);
-    border-color: #D85A30;
     cursor: pointer;
     transform: translateY(-2px);
 }
@@ -118,14 +111,14 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    color: var(--black);
+    color: var(--font-color);
     min-width: 0;
 }
 
 .uId {
     font-size: 11px;
     font-weight: 700;
-    color: #D85A30;
+    color: var(--accent);
     letter-spacing: 0.04em;
 }
 
@@ -139,7 +132,7 @@
 
 .uEmail {
     font-size: 13px;
-    color: #8a8175;
+    color: var(--muted);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -148,7 +141,7 @@
 .cEmpty {
     grid-column: 1 / -1;
     text-align: center;
-    color: #8a8175;
+    color: var(--muted);
     padding: 3rem 0;
 }
 
@@ -164,15 +157,15 @@
     grid-template-columns: 56px 60px 1fr 1fr 160px;
     align-items: center;
     gap: 16px;
-    background: #fff;
-    border: 1px solid #efe9e3;
+    background: var(--bg);
+    border: 1px solid var(--accent);    
     border-radius: 10px;
     padding: 10px 18px;
     transition: border-color 0.2s ease;
 }
 
 .uRow:hover {
-    border-color: #D85A30;
+    border-color: var(--accent-second);
     cursor: pointer;
 }
 
@@ -184,18 +177,19 @@
 .uRow .uId {
     font-size: 12px;
     font-weight: 700;
-    color: #D85A30;
+    color: var(--accent);
 }
 
 .uRow .uNome {
     font-weight: 600;
     font-size: 14px;
+    color: var(--font-color);
 }
 
 .uRow .uEmail,
 .uRow .uTelefone {
     font-size: 13px;
-    color: #8a8175;
+    color: var(--muted);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
