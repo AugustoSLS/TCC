@@ -7,20 +7,14 @@ import Dashboard from './pages/dashboard.jsx'
 import Clients from './pages/clientes.jsx'
 import Plans from './pages/planos.jsx'
 
-
 import ClienteDetalhe from './pages/ClienteDados/ClienteDetalhe.jsx';
 import DadosPessoais from './pages/ClienteDados/dadosPessoais.jsx';
 import Contrato from './pages/ClienteDados/Contrato.jsx';
+import EditarCliente from './pages/ClienteDados/editarCliente.jsx';
+
 
 // components
 import FormModal from './components/FormModal/FormModal';
-
-
-
-
-
-// Components
-
 import Header from './components/header'
 
 function App() {
@@ -38,6 +32,7 @@ function App() {
             <Route path="/clientes/:id" element={<ClienteDetalhe />}>
               <Route index element={<DadosPessoais />} />
               <Route path="contrato" element={<Contrato />} />
+              <Route path="editar" element={<EditarCliente  />} />
             </Route>
           </Routes>
         </main>

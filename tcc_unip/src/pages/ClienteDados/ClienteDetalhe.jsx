@@ -3,7 +3,6 @@ import { useParams, NavLink, Outlet } from 'react-router-dom';
 import { formatarCadastro } from '../../components/formatData';
 import '../../styles/clientedetalhe.css';
 
-
 export default function ClienteDetalhe() {
     const { id } = useParams();
 
@@ -39,16 +38,13 @@ export default function ClienteDetalhe() {
                         <span className="dId">#{cliente.id} - desde {formatarCadastro(cliente.data_cadastro)}</span>
                     </div>
                 </div>
-            <div className="dBrowser">
-                <nav className="dTabs">
-                    <NavLink to="" end>
-                        Dados pessoais
-                    </NavLink>
-                    <NavLink to="contrato">
-                        Contrato
-                    </NavLink>
-                </nav>
-                    <Outlet context={{ cliente }} />
+                <div>
+                    <nav className="dTabs">
+                        <NavLink to="" end>Dados pessoais</NavLink>
+                        <NavLink to="contrato">Contrato</NavLink>
+                        <NavLink to="editar">Editar</NavLink>
+                    </nav>
+                    <Outlet context={{ cliente, setCliente }} />
                 </div>
             </div>
         </section>

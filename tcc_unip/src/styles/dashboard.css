@@ -1,0 +1,45 @@
+.dashSection {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.dashGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.dashCard {
+    background: var(--bg);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+}
+
+.dashLabel {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.dashValue {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+@media (max-width: 720px) {
+    .dashGrid {
+        grid-template-columns: 1fr;
+    }
+}
