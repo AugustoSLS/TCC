@@ -124,3 +124,8 @@
   font-size: 15px;
   max-width: 30%;
 }
+
+.cForm input.input-error {
+  border:2px solid #e53935;
+  background: #fff5f5;
+}

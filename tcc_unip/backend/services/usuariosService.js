@@ -88,7 +88,6 @@ export async function buscarEstatisticas() {
     };
 }
 
-
 export async function atualizarUsuario(id, { nome, sobrenome, cpf, data_nascimento, email, ddi, telefone }) {
   const result = await pool.query(
     `UPDATE usuarios
