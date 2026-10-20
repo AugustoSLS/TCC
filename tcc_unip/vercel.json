@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "tcc_unip": {
+      "root": "tcc_unip",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "tcc_unip/backend",
+      "framework": "express"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "backend"
+      }
+    }
+  ]
+}
